@@ -12,9 +12,13 @@ document.getElementById("get-seed").addEventListener("submit", function (e) {
     .then((res) => res.json())
     .then((data) => {
       const postsColor = data;
-      for (let i = 0; i < 5; i++) {
-        console.log(postsColor.colors[i].hex.value);
-        console.log(color[i]);
+
+      let colors = document.getElementsByClassName("color");
+      let colorhexs = document.getElementsByClassName("colorhex");
+
+      for (i = 0; i < colors.length; i++) {
+        colors[i].style.backgroundColor = postsColor.colors[i].hex.value;
+        colorhexs[i].innerHTML = postsColor.colors[i].hex.value;
       }
     });
 });
