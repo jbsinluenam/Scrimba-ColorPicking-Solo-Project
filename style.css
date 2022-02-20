@@ -70,7 +70,8 @@ button {
   border: none;
 }
 
-button:hover {
+button:hover,
+button:active {
   color: #3d4b60;
   background-color: #fff;
   font-weight: bold;
@@ -135,7 +136,8 @@ button:hover {
     grid-column: 2/3;
   }
 
-  button:hover {
+  button:hover,
+  button:active {
     color: #3d4b60;
     background-color: #fff;
     font-weight: bold;
